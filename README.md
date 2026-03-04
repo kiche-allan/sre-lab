@@ -11,7 +11,7 @@ Security Dashboards: Real-time Kibana visualizations that distinguish between va
 Prerequisites
 Kind (Kubernetes in Docker)
 
-Helm (for Vault and cert-manager installation)
+Helm (for Vault and cert-manager installation).
 
 Installation
 Provision Cluster: kind create cluster --config=kind-config.yaml
