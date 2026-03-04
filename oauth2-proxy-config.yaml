@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oauth2-proxy-config
+data:
+  oauth2-proxy.cfg: |-
+    provider = "oidc"
+    provider_display_name = "Equity Bank Identity"
+    email_domains = ["*"]
+    upstreams = ["https://core-banking.default.svc.cluster.local:443"]
+    # In a real setup, client_id and client_secret would come from Vault
+    client_id = "sre-lab-client"
+    client_secret = "highly-secure-secret"
+    oidc_issuer_url = "https://accounts.google.com" # Using Google as a test OIDC provider

@@ -1,0 +1,21 @@
+# Kubernetes/Helm
+.helm/
+tiller.log
+
+# Vault/Secrets
+vault-token
+*.pem
+*.key
+*.crt
+
+# WSL/OS/Development
+.DS_Store
+*.swp
+*~
+node_modules/
+bin/
+obj/
+
+# Local Environment
+.env
+.vault-token

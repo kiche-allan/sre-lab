@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: core-banking
+  labels:
+    app: core-banking
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: core-banking
+  template:
+    metadata:
+      labels:
+        app: core-banking
+    spec:
+      containers:
+      - name: banking-api
+        image: nginx # Using Nginx to simulate a TLS-terminated API
+        ports:
+        - containerPort: 443
+        volumeMounts:
+        - name: tls-certs
+          mountPath: "/etc/nginx/certs"
+          readOnly: true
+      volumes:
+      - name: tls-certs
+        secret:
+          secretName: core-banking-tls-secret
