@@ -25,8 +25,8 @@ helm install vault hashicorp/vault --set "server.dev.enabled=true"
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.13.0/cert-manager.yaml
 Apply Manifests: kubectl apply -f k8s-core/ && kubectl apply -f observability/
 
-# 🎓 SRE Interview Highlights
-This project provides tangible evidence for the following Senior SRE competencies:
+# 🎓 SRE  Highlights
+
 
 Infrastructure as Code (IaC): Every security rule and observability component is version-controlled.
 
